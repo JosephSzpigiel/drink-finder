@@ -1,3 +1,14 @@
 {
-  "favorites": []
+  "favorites": [
+    {
+      "id": 16967,
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/xwxyux1441254243.jpg",
+      "strDrink": "Vodka Fizz"
+    },
+    {
+      "id": 16273,
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uv96zr1504793256.jpg",
+      "strDrink": "Shark Attack"
+    }
+  ]
 }
