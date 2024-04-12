@@ -17,7 +17,9 @@ fetch(favoritesUrl)
         favoritesArray = Array.from(response)
         favoritesArray.forEach(drink => {
             favoritesIds.push(drink.id) 
-        })})
+        }
+        console.log(favoritesIds)                      
+                              )})
 setFavoritesButton()
 sortField.disabled = true
 sortField.selectedIndex = 0
