@@ -4,12 +4,13 @@ const drinkDiv = document.querySelector("#selected-drink")
 const sortField = document.querySelector('#sort-by')
 const randomBtn = document.querySelector("#random")
 const showing = document.querySelector("#showing-results")
+const favoritesUrl  = 'https://my-json-server.typicode.com/JosephSzpigiel/drink-finder/db'
 
 let favoritesArray = []
 let favoritesIds = []
 
 //Get favorites and store them in an Array
-fetch('http://localhost:3000/favorites')
+fetch(favoritesUrl)
     .then(r => r.json())
     .then(response => {
         favoritesArray = Array.from(response)
@@ -204,7 +205,7 @@ function createDrinkCard(drink){
     }
 
     function postFavorite(e){
-        fetch('http://localhost:3000/favorites',{
+        fetch(favoritesUrl,{
             method : 'POST',
             headers : {
                 "Content-Type": "application/json",
@@ -221,7 +222,7 @@ function createDrinkCard(drink){
     }
     
     function deleteFavorite(e){
-        fetch('http://localhost:3000/favorites/'+drinkId,{
+        fetch(favoritesUrl+drinkId,{
             method : 'DELETE',
             headers : {
                 "Content-Type": "application/json",
