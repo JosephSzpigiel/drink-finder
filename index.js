@@ -13,9 +13,10 @@ let favoritesIds = []
 fetch(favoritesUrl)
     .then(r => r.json())
     .then(response => {
+        print(response)
         favoritesArray = Array.from(response)
         favoritesArray.forEach(drink => {
-            favoritesIds.push(drink.id)
+            favoritesIds.push(drink.id) 
         })})
 setFavoritesButton()
 sortField.disabled = true
